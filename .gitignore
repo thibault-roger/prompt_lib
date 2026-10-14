@@ -1,0 +1,11 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.env
+# Local scratch: rendered prompts, experiments
+scratch/
+*.local.md
+# Filled-in task variables (may contain internal hostnames)
+*.vars.local
+vars.local

@@ -1,0 +1,25 @@
+# Variables for the ds-platform-refactor task.
+# Copy to vars.local (git-ignored) and fill in. Format: KEY=value. A value of @path reads a file.
+
+# Prompt 0 — platform specifics
+CURRENT_PACKAGE_NAME=dsp_decorators
+K8S=Kubernetes 1.30 / OpenShift 4.17
+ARGO_VERSION=3.5
+ARTIFACT_REPO=s3://argo-artifacts (MinIO)
+BUILD_TOOL=buildah
+REGISTRY=registry.internal.example
+CI=GitLab CI
+MIRROR=Nexus PyPI proxy
+VERSIONS=3.8, 3.9, 3.10, 3.11, 3.12
+P99_TARGET=50 ms
+
+# Later phases
+SCANNER=Trivy
+LOG_BACKEND=Loki
+RETENTION=30 days hot, 1 year archive
+# H3 soak: max memory growth in %
+X=10
+# Release gate: max age in days of the last rollback test
+N=14
+# Release gate: usually passed per run with --var PROJECT=...
+PROJECT=
